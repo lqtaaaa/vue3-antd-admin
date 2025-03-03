@@ -1,0 +1,3 @@
+2025/03/03 07:21:41 [info] 30#30: *1 client ::1 closed keepalive connection
+2025/03/03 08:17:13 [info] 32#32: *29 client timed out (110: Operation timed out) while waiting for request, client: 172.18.0.1, server: 0.0.0.0:6666
+2025/03/03 08:18:56 [info] 32#32: *30 client timed out (110: Operation timed out) while waiting for request, client: 172.18.0.1, server: 0.0.0.0:6666

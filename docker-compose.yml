@@ -8,8 +8,21 @@ services:
       dockerfile: Dockerfile
       target: production
     image: buqiyuan/vue3-antdv-admin:latest
+    container_name: vue3-antdv-admin
+    restart: unless-stopped
     ports:
-      - '80:80'
+      - '8080:6666'
     env_file:
-      - .env
       - .env.production
+    networks:
+      - app-network
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - ./test.html:/usr/share/nginx/html/test.html
+      # 如果需要持久化日志，可以添加
+      - ./logs:/var/log/nginx
+
+# 定义网络
+networks:
+  app-network:
+    driver: bridge
