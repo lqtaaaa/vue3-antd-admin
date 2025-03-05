@@ -7,6 +7,11 @@ services:
       context: .
       dockerfile: Dockerfile
       target: production
+      args:
+        - NODE_ENV=production
+      # 增加构建超时时间为30分钟
+      timeout: 1800
+      network: host
     image: buqiyuan/vue3-antdv-admin:latest
     container_name: vue3-antdv-admin
     restart: unless-stopped
