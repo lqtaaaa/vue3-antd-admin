@@ -22,6 +22,15 @@ const routes: Array<RouteRecordRaw> = [
         },
         component: () => import('@/views/dashboard/welcome/index.vue'),
       },
+      {
+        path: 'cockpit',
+        name: `${moduleName}-cockpit`,
+        meta: {
+          title: t('routes.dashboard.cockpit'),
+          icon: 'ant-design:control-outlined',
+        },
+        component: () => import('@/views/dashboard/cockpit/index.vue'),
+      },
     ],
   },
 ];

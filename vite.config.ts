@@ -119,7 +119,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       proxy: {
         '^/api': {
           // target: 'https://nest-admin.buqiyuan.top',
-          target: 'http://127.0.0.1:7001',
+          target: 'http://47.100.216.192:7001/',
           changeOrigin: true,
           rewrite: (path) => path.replace(/^\/api/, ''),
         },
